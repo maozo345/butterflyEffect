@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="אפקט הפרפר - תהליך קבוצתי של 6 מפגשים + סטאז' ליצירת הקורס הראשון שלך והגדלת ההשפעה שלך בעולם. הצטרפי עכשיו!">
+  <meta name="keywords" content="אפקט הפרפר, קורס אונליין, התפתחות אישית, שליחות, יצירת קורס">
+  <meta name="author" content="אפקט הפרפר">
+  <meta property="og:title" content="אפקט הפרפר - ליווי להוצאת הקורס שלך">
+  <meta property="og:description" content="הצטרפי לתהליך קבוצתי של 6 מפגשים ליצירת הקורס הראשון שלך!">
+  <meta property="og:type" content="website">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>אפקט הפרפר - גלי את הקול הפנימי שלך עם אביב אפרת</title>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Assistant', 'Varela Round','Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;
+      background: linear-gradient(135deg, #fff5f8 0%, #f3e7f5 50%, #e8d8f0 100%);
+      color: #333;
+      direction: rtl;
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    
+    /* Header Hero */
+    .hero {
+      background: linear-gradient(135deg, #b76aa0aa, #8d3e75aa), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><radialGradient id="g"><stop offset="0%" stop-color="%23ffffff" stop-opacity="0.1"/><stop offset="100%" stop-color="%23ffffff" stop-opacity="0"/></radialGradient></defs><circle cx="20" cy="20" r="2" fill="url(%23g)"/><circle cx="80" cy="40" r="1.5" fill="url(%23g)"/><circle cx="40" cy="80" r="1" fill="url(%23g)"/></svg>');
+      padding: 4rem 0;
+      text-align: center;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 2px,
+        rgba(255,255,255,0.03) 2px,
+        rgba(255,255,255,0.03) 4px
+      );
+      animation: shimmer 20s linear infinite;
+    }
+    
+    @keyframes shimmer {
+      0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+      100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      animation: fadeInUp 1s ease-out;
+    }
+    
+    .hero h2 {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      opacity: 0.95;
+      animation: fadeInUp 1s ease-out 0.3s both;
+    }
+    
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin: 2rem 0;
+      animation: fadeInUp 1s ease-out 0.6s both;
+    }
+    
+    .stat {
+      text-align: center;
+    }
+    
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: bold;
+      display: block;
+      color: #fff3a0;
+    }
+    
+    .stat-text {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Welcome Section */
+    .welcome-section {
+      background: linear-gradient(180deg, #fef7fa, #ffd6e0);
+      padding: 2.5rem;
+      margin: -2rem 0 1.5rem 0;
+      border-radius: 2rem 2rem 0 0;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      z-index: 3;
+    }
+
+    .welcome-section::before {
+      content: '';
+      position: absolute;
+      top: -30px;
+      left: -30px;
+      width: 60px;
+      height: 60px;
+      background: radial-gradient(circle, rgba(255, 105, 180, 0.2), transparent);
+      border-radius: 50%;
+    }
+
+    .welcome-section::after {
+      content: '';
+      position: absolute;
+      bottom: -30px;
+      right: -30px;
+      width: 60px;
+      height: 60px;
+      background: radial-gradient(circle, rgba(255, 105, 180, 0.2), transparent);
+      border-radius: 50%;
+    }
+
+    .welcome-section h2 {
+      font-size: 2.2rem;
+      color: #ae007a;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeIn 1s ease-out forwards;
+    }
+
+    .welcome-content {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 1.5rem;
+      border: 1px solid #ff69b4;
+      border-radius: 8px;
+      max-width: 800px;
+      margin: 0 auto;
+      opacity: 0;
+      animation: fadeIn 1.4s ease-out forwards;
+    }
+
+    .welcome-content p {
+      font-size: 1rem;
+      color: #333;
+      line-height: 1.6;
+      margin-bottom: 0.8rem;
+    }
+
+    .welcome-content p:last-child {
+      font-weight: 600;
+    }
+
+    .music-btn {
+      background: #ff69b4;
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border-radius: 20px;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 1rem;
+      margin-right: 1rem;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+
+    .music-btn:hover {
+      background: #ae007a;
+    }
+    
+    /* About Section */
+    .about-section {
+      background: white;
+      padding: 4rem 0;
+      position: relative;
+      z-index: 3;
+    }
+    
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    
+    .profile-card {
+      background: linear-gradient(135deg, #f8f0f5, #f0e8f3);
+      padding: 2rem;
+      border-radius: 1.5rem;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(183, 106, 160, 0.1);
+      transform: perspective(1000px) rotateY(-5deg);
+      transition: transform 0.3s ease;
+    }
+    
+    .profile-card:hover {
+      transform: perspective(1000px) rotateY(0deg);
+    }
+    
+    .profile-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin: 0 auto 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+    }
+
+    .profile-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    
+    .profile-name {
+      font-size: 1.5rem;
+      color: #8d3e75;
+      margin-bottom: 0.5rem;
+    }
+    
+    .profile-title {
+      color: #b76aa0;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+    
+    .credentials {
+      font-size: 0.85rem;
+      color: #666;
+      line-height: 1.4;
+    }
+    
+    .about-text h3 {
+      color: #8d3e75;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .about-text p {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+      color: #555;
+    }
+    
+    .highlight {
+      background: linear-gradient(120deg, rgba(183, 106, 160, 0.1) 0%, rgba(183, 106, 160, 0.1) 100%);
+      padding: 0.2em 0.5em;
+      border-radius: 0.3em;
+      font-weight: 600;
+    }
+
+    /* Story Section */
+    .story {
+      background: linear-gradient(180deg, #fef7fa, #fff0f5);
+      padding: 2.5rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .story::before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      left: -50px;
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(circle, rgba(255, 105, 180, 0.3), transparent);
+      border-radius: 50%;
+    }
+
+    .story::after {
+      content: '';
+      position: absolute;
+      bottom: -50px;
+      right: -50px;
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(circle, rgba(255, 105, 180, 0.3), transparent);
+      border-radius: 50%;
+    }
+
+    .story blockquote {
+      font-size: 1.4rem;
+      color: #ae007a;
+      font-weight: 700;
+      margin: 1.5rem 0;
+      padding: 1.5rem;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      animation: fadeInUp 1.2s ease-out;
+      text-align: center;
+    }
+
+    .story p.emphasized {
+      font-size: 1.2rem;
+      color: #87005c;
+      font-weight: 600;
+      background: rgba(255, 240, 245, 0.5);
+      padding: 1rem;
+      border-radius: 8px;
+      margin: 1rem 0;
+      animation: fadeInUp 1.4s ease-out;
+    }
+
+    .story-image {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin: 2rem auto;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Benefits Section */
+    .benefits-section {
+      background: #fff5f8;
+      border-right: 5px solid #ff69b4;
+      padding: 2.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      animation: slideIn 0.8s ease-out;
+    }
+
+    .benefits-section h2 {
+      color: #8d3e75;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .benefits-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .benefits-section ul li {
+      position: relative;
+      padding-right: 2rem;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .benefits-section ul li::before {
+      content: '✅';
+      position: absolute;
+      right: 0;
+      top: 0;
+      font-size: 1.2rem;
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(20px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    
+    /* Program Section */
+    .program-section {
+      padding: 4rem 0;
+      background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+    }
+    
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #8d3e75;
+      margin-bottom: 3rem;
+    }
+    
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    
+    .program-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-left: 4px solid #b76aa0;
+    }
+    
+    .program-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(183, 106, 160, 0.15);
+    }
+    
+    .program-card h4 {
+      color: #8d3e75;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+    
+    .program-card ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .program-card li {
+      margin-bottom: 0.8rem;
+      padding-right: 1.5rem;
+      position: relative;
+    }
+    
+    .program-card li::before {
+      content: "🦋";
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    /* VIP Section */
+    .vip-section {
+      background: #fff0f5;
+      border-right: 5px solid #ff69b4;
+      padding: 2.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .vip-section h2 {
+      color: #8d3e75;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .vip-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .vip-section ul li {
+      position: relative;
+      padding-right: 2rem;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .vip-section ul li::before {
+      content: '🎁';
+      position: absolute;
+      right: 0;
+      top: 0;
+      font-size: 1.2rem;
+    }
+    
+    /* Details Section */
+    .details-section {
+      padding: 4rem 0;
+      background: white;
+    }
+    
+    .details-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    
+    .detail-card {
+      background: linear-gradient(135deg, #fff5f8, #f8f0f5);
+      padding: 2rem;
+      border-radius: 1rem;
+      text-align: center;
+      border: 2px solid rgba(183, 106, 160, 0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .detail-card:hover {
+      border-color: rgba(183, 106, 160, 0.3);
+      transform: scale(1.02);
+    }
+    
+    .detail-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    
+    .detail-card h4 {
+      color: #8d3e75;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+    
+    .price-highlight {
+      font-size: 2rem;
+      color: #b76aa0;
+      font-weight: bold;
+      margin: 1rem 0;
+    }
+    
+    .price-note {
+      font-size: 0.9rem;
+      color: #666;
+      text-decoration: line-through;
+    }
+    
+    /* Testimonials */
+    .testimonials-section {
+      padding: 4rem 0;
+      background: linear-gradient(135deg, #f3e7f5 0%, #e8d8f0 100%);
+    }
+    
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .testimonial {
+      background: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      position: relative;
+    }
+    
+    .testimonial::before {
+      content: '"';
+      font-size: 4rem;
+      color: #b76aa0;
+      position: absolute;
+      top: -1rem;
+      right: 1rem;
+      opacity: 0.3;
+    }
+    
+    .testimonial-text {
+      font-style: italic;
+      margin-bottom: 1rem;
+      line-height: 1.7;
+    }
+    
+    .testimonial-author {
+      color: #8d3e75;
+      font-weight: bold;
+    }
+    
+    /* CTA Section */
+    .cta-section {
+      padding: 4rem 0;
+      background: linear-gradient(135deg, #8d3e75, #b76aa0);
+      text-align: center;
+      color: white;
+    }
+    
+    .cta-content h3 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .cta-content p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      opacity: 0.95;
+    }
+    
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 1rem 2.5rem;
+      border: none;
+      border-radius: 2rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+    
+    .btn-primary {
+      background: white;
+      color: #8d3e75;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    }
+    
+    .btn-secondary {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+    
+    .btn-secondary:hover {
+      background: white;
+      color: #8d3e75;
+    }
+
+    .btn-bit {
+      background: linear-gradient(90deg, #2f80ed, #5a6ddd);
+      color: white;
+    }
+    .btn-bit:hover {
+      background: linear-gradient(90deg, #225ab7, #414db1);
+      box-shadow: 0 9px 30px #1f479d;
+    }
+        .btn-vip {
+      background: linear-gradient(90deg, #edd02f, #ddaf5a);
+      color: white;
+    }
+    .btn-vip:hover {
+      background: linear-gradient(90deg, #8f22b7, #b141a6);
+      box-shadow: 0 9px 30px #1f9d32;
+    }
+    
+    .urgency {
+      background: rgba(255,255,255,0.1);
+      padding: 1rem;
+      border-radius: 0.5rem;
+      margin-top: 2rem;
+      border-right: 4px solid #fff3a0;
+    }
+    
+    /* Footer */
+    footer {
+      background: #2d1f2d;
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+    }
+     section.gallery {
+        margin: 3rem auto;
+        max-width: 540px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 14px;
+        box-shadow: 0 0 20px rgba(160,140,255,0.25);
+        padding: 2rem;
+    }
+    section.gallery img {
+        width: 100%;
+        max-width: 50vw;
+        border-radius: 12px;
+        box-shadow: 0 5px 18px rgba(85,72,255,0.5);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    section.gallery img:hover,
+    section.gallery img:focus {
+        transform: scale(1.05);
+        box-shadow: 0 8px 25px #776affcc;
+        outline: none;
+    }
+
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      background-color: #25D366;
+      border-radius: 50%;
+      padding: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp-float img {
+      width: 40px;
+      height: 40px;
+      display: block;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.5rem; }
+      .hero h2 { font-size: 1.2rem; }
+      .hero-stats { gap: 1.5rem; }
+      .about-content { grid-template-columns: 1fr; text-align: center; }
+      .cta-buttons { flex-direction: column; align-items: center; }
+      .btn { width: 80%; max-width: 300px; }
+      .welcome-section { padding: 1.5rem; }
+      .welcome-section h2 { font-size: 1.8rem; }
+      .welcome-content { padding: 1rem; }
+       section.gallery img {max-width: 80vw;}
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>🦋 אפקט הפרפר</h1>
+        <h2>לווי אישי קבוצתי פרקטי בו את מגדילה את האפקט שלך בעולם</h2>
+        <div class="sticky-cta">
+          <a href="#signup" class="btn btn-primary">הרשמי עכשיו!</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">100+</span>
+            <span class="stat-text">קטעי תוכן שעשו השפעה</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">6</span>
+            <span class="stat-text">מפגשים מעצימים</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">98%</span>
+            <span class="stat-text">דירוג שביעות רצון</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Welcome Section -->
+  <section class="welcome-section" aria-labelledby="intro-heading">
+    <h2 id="intro-heading">ברוכה הבאה למסע שלך ✨</h2>
+    <div class="welcome-content">
+      <p>תוכנית ומעטפת להוצאת הקורס הראשון שלך (גם אם זה לא הראשון)</p>
+      <p>כלים ותבניות שיעזרו לך בהמשך הדרך שלך לייצר פרוייקטים בעצמך כוללים את כל הרבדים בהם תעברי כדי להוציא קורס - הערך שלך החוצה נעבור על חסמים חסימיים, רגשיים מיקוד בנשמה, עבודה עם כלים טכניים, כלים לייצר כל יצרף מ 0 עבודה עם תוכנותות מחשב פשוטות</p>
+      <button class="music-btn" aria-label="הפעל מוזיקת קסם" aria-describedby="music-desc">🎶  לחצי כאן להפעלת מוזיקת קסם עבור העצמת חווית הקריאה שלך</button>
+      <span id="music-desc" class="sr-only">הפעל מוזיקת רקע רוחנית לחוויית מסע קסומה</span>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="container">
+      <div class="about-content">
+        <div class="profile-card">
+          <div class="profile-image">
+            <img src="lib/אביב אפרת הבית הרוחני אפקט הפרפר לימודי תיקשור פיתוח האינטואיציה 12 הדרכים שהיקום מתקשר איתך.png" alt="אביב אפרת הבית הרוחני">
+          </div>
+          <div class="profile-name">אביב אפרת</div>
+          <div class="profile-title">מלווה תהליכי התפתחות אישית ונשמתית</div>
+          <div class="credentials">
+            • מלמדת אותך להתחבר לאינטואיציה ולפתח יכולות תקשור<br>
+            • 8 שנות ניסיון בהעברת מידע התפתחותי ורוחני<br>
+            • תעסוקה במדיה ויצירת מוצרים<br>
+            • הילינג, קסם, אינטואיציה וריפוי
+          </div>
+        </div>
+        
+        <!-- <div class="about-text">
+          <h3>הסיפור שלי מתחיל במקום מוכר...</h3>
+          <p>במשך שנים הרגשתי שיש לי משהו חשוב להגיד לעולם, אבל הקול שלי פשוט לא יצא. <span class="highlight">חששתי מביקורת, פחדתי שלא אהיה מספיק טובה</span>, והעדפתי להישאר בצל.</p>
+          
+          <p>המסע שלי החל כשהבנתי שהקול הפנימי שלנו הוא לא רק דרך להביע את עצמנו - <span class="highlight">הוא הכוח שלנו לרפא ולשנות את העולם</span>. כשנשה מתחברת לקול האמיתי שלה, היא לא רק משנה את חייה - היא יוצרת גלים של השפעה שמגיעים רחוק.</p>
+          
+          <p>היום אני מלווה נשים למצוא את הקול הייחודי שלהן ולהעז לחלוק אותו עם העולם. כי כשאת פורשת כנפיים - העולם משתנה איתך.</p>
+        </div>
+      </div>
+    </div>  
+  </section> -->
+
+  <!-- Story Section -->
+  <section class="container">
+    <div class="story" aria-labelledby="story-heading">
+      <h3>הסיפור שלי מתחיל במקום מוכר...</h3>
+      <h3>המסע שלי – ממאגר ידע להשפעה אמיתית</h3>
+      <p class="emphasized">את יודעת שזה הזמן- זמן למימוש הייעוד והשליחות שלך להבין סוף סוף את הערך שיש לך לתת - כשאת תראי את התוצר למול העיניים לא יהיה לך ספק</p>
+      <p>גם אני לאחר שנים של ספיגת ידע ופרקטיקה עדיין לא הרגשתי שיש לי מה לתת לעולם, הייתי יושבת מול הדברים שכתבתי ואובדת עצות- הרגשתי שיש לי המון לתת, ידעתי שיש לידע שלי ערך מטורף אך בסוף כל יום הרגשתי כישלון לא ידעתי מה לעשות וכל יום חזר על עצמו- עוד לימוד ועוד פרטיקה שאני צוברת ולומדת - אבל מה עם להוציא את זה הלאה?!</p>
+      <blockquote>
+        "הרגשתי שיש לי המון לתת, אבל בסוף כל יום הרגשתי כישלון. החלטתי לשנות את סדר המשחק ולהתעלות מעל עצמי יצרתי מודולים אחר מודלים, ניסיתי, שיניתי עד שהצלחתי"
+      </blockquote>
+      <p>יצרתי פרוייקטים, קורסים שהתחילו להניע לי שפע והשפעה סוף סוף הרגשתי שיש לידע שלי ערך - שהוא עושה שינוי סוף סוף הצלחתי להוציא ממאגר הידע שלי - תוכן מזוקק זה לא היה פשוט במיוחד לראש כמוני בעל מיליון רעיונות</p>
+      <p class="emphasized">היום אני יודעת שהידע שלי משפיע - אין יום שאני לא מקבלת הודעה על ההשפעה שלי בעולם ועל כמה הידע שלי עוזר לאנשים - אין סיפוק כמו זה</p>
+      <p>ובריתי את הליווי הזה בצורה מדוייקת - עבורך- עבור אביב של פעם שידעה כמה ערך יש לה לתת לעולם אבל לא ידעת איך איך להוציא, איזה מחסומים לעבור, עם איזה תוכנות להשתמש, איך להביא אנשים, איך להפיץ את זה הלאה, איך לבחור את פיסת התוכן המדוייקת שתעזור, איך לזקק הכל לידע טהור ונגיש</p>
+      <p class="emphasized">ולכל השאלות והבעיות האלה יש לי תשובה התשובה פשוטה- אפקט הפרפר תוכנית עם צעדים מדוייקים ואפקטיבים שיוציאו את הערך וההשפעה שלך לעולם</p>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="container">
+    <div class="benefits-section" aria-labelledby="benefits-heading">
+      <h2 id="benefits-heading">✨ עם מה תצאי בסוף התהליך?</h2>
+      <ul>
+        <li>קורס משלך! התגשמות פיזית של הערך שלך ומה שיש לך לתת לעולם</li>
+        <li>כלים לייצר קורסים בעצמך בכל פעם שתרצי ושיעלה לך וויזן חדש</li>
+        <li>עבודה עם חסמים של חשיפה ברשת והגדלת הכלי שלך להרחבת ההשפעה שלך בעולם</li>
+        <li>פידבאקים כתובים על הקורס הראשון שלך</li>
+        <li>ניסיון של עבודה בשטח- תעבירי את הקורס שלך מול אנשים אמיתים שיתנו לך פידבאק (סמכי עלי אני אביא את האנשים הנכונים עבורך)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Program Section -->
+  <section class="program-section">
+    <div class="container">
+      <h3 class="section-title">המסע שלך ב-6 מפגשים מעצימים</h3>
+      
+      <div class="program-grid">
+        <div class="program-card">
+          <h4>🥚 מפגש 1: בוקעים מהביצה - ההחלטה לצאת לאור</h4>
+          <ul>
+            <li>הכנה לתהליך ושליחת כוונה</li>
+            <li>איך שומרים על עצמי תוך כדי היציאה לאור?</li>
+            <li>מדיטציית חיבור ופריסת כנפי אור</li>
+            <li>איך לנצח את הפרפקציוניזם</li>
+          </ul>
+        </div>
+        
+        <div class="program-card">
+          <h4>🐛 מפגש 2: זוחלים להצלחה</h4>
+          <ul>
+            <li>בניית יסודות חזקים להתפתחות</li>
+            <li>התמודדות עם פחדים וחסמים פנימיים</li>
+            <li>בחירת נושא הקורס שלך</li>
+            <li>יצירת תוכנית פעולה אישית</li>
+          </ul>
+        </div>
+        
+        <div class="program-card">
+          <h4>🐛 מפגש 3: זוחלים להצלחה - המשך המסע</h4>
+          <ul>
+            <li>הכנת מערך</li>
+            <li>לימוד איך יוצרים מצגת נכונה</li>
+            <li>פיתוח כלים למימוש החזון</li>
+            <li>שילוב של רוחניות ומעשיות</li>
+            <li>בניית מומנטום להמשך הדרך</li>
+            <li>שילוב תוכנות וAI</li>
+          </ul>
+        </div> 
+        
+        <div class="program-card">
+          <h4>🛠️ מפגש 4: גולם - מכינים את חומרי הגלם</h4>
+          <ul>
+            <li>חידודים שאלות תשובות</li>
+            <li>עבודה על הצגת הסיפור שלי</li>
+            <li>בניית תוכן ומסרים אישיים</li>
+            <li>הכנה מנטלית ורגשית לשלב הבא</li>
+          </ul>
+        </div>
+        
+        <div class="program-card">
+          <h4>🦋 מפגש 5: יציאה מגולם וחיזוק הכנפיים - התנסות מעשית</h4>
+          <ul>
+            <li>התנסויות מעשיות</li>
+            <li>עקרונות העברת הידע</li>
+            <li>התאמת התדמית אל התוכן</li>
+            <li>בונוסים</li>
+          </ul>
+        </div>
+        
+        <div class="program-card">
+          <h4>✨ מפגש 6: פורסים כנפיים ומפיצים אבקת אור - לומדים לעוף</h4>
+          <ul>
+            <li>חזרה על הכלים להמשך הדרך</li>
+            <li>מסקנות שימורים ושיפורים לאחר ההתנסות בשטח</li>
+            <li>בניית תוכנית המשך לאחר הקורס</li>
+            <li>חגיגה והכרה בשינוי שחל</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+  <!-- Details Section -->
+  <section class="details-section">
+    <div class="container">
+      <h3 class="section-title">פרטי התכנית</h3>
+      
+      <div class="details-grid">
+        <div class="detail-card">
+          <span class="detail-icon">💻</span>
+          <h4>איפה ומתי?</h4>
+          <p><strong>6 מפגשי לייב אונליין</strong><br>
+          ימי שני | 19:00-21:00<br>
+          מתחילים 7.7.25<br>
+          <em>הקלטות זמינות למי שלא יכולה להגיע</em></p>
+        </div>
+        
+        <div class="detail-card">
+          <span class="detail-icon">👥</span>
+          <h4>הקבוצה</h4>
+          <p><strong>מקסימום 16 נשים</strong><br>
+          קבוצה אינטימית ותומכת<br>
+          מרחב בטוח ללא שיפוטיות</p>
+        </div>
+        
+        <div class="detail-card">
+          <span class="detail-icon">🎁</span>
+          <h4>בונוסים</h4>
+          <p><strong>קבלי בנוסף:</strong><br>
+          📚 חוברת תרגילים אישית<br>
+          🧘‍♀️ הקלטות מדיטציה לחיזוק הקול<br>
+          💬 קבוצת ווטסאפ תומכת<br>
+          <em>שווי של 450₪ - בחינם!</em></p>
+        </div>
+        
+        <div class="detail-card">
+          <span class="detail-icon">💰</span>
+          <h4>השקעה</h4>
+          <div class="price-note">מחיר רגיל: 3,330₪</div>
+          <div class="price-highlight">897₪</div>
+          <p><strong>או 3 תשלומים של 299₪</strong><br>
+          <em>מחיר מיוחד להרשמה מוקדמת</em></p>
+        </div>
+      </div>
+    </div>
+  </section>
+ <!-- VIP Section -->
+  <section class="container">
+    <div class="vip-section" aria-labelledby="vip-heading">
+      <h2 id="vip-heading">🎁   למי שקונה את חבילת ה-VIP</h2>
+      <ul>
+        <li>דף נחיתה משלך לקורס! בשווי 1500שח שהשותף המתכנת שלי יעשה עבורך עם שיחת התייעצות לבניית האתר יחד - כדי שניצור עבורך את הדף המושלם!</li>
+        <li>חניכה של שיווק ומכירות מפרספקטיבה רוחנית ומעשית!</li>
+        <li>הדרכה של חשיפה ברשת בכל הרבדים</li>
+        <li>שיחת ייעוץ אישית איתי</li>
+      </ul>
+      <div class="price-highlight">1555₪</div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials-section">
+    <div class="container">
+      <h3 class="section-title">מה אומרות הנשים שעברו את התהליכים קודמים</h3>
+          <!-- גלריית תמונות  -->
+    <section class="gallery" aria-label="גלריית תמונות מהאתגר">
+    <img src="lib/פידבק 1 לאפקט הפרפר הבית הרוחני אביב אפרת.jpg" alt="אביב אפרת הבית הרוחני tabindex="0" />
+        <img src="lib/פידבק 2 לאפקט הפרפר הבית הרוחני אביב אפרת.jpg" alt="אביב אפרת הבית הרוחני" tabindex="0" />
+        <img src="lib/פידבק 3 לאפקט הפרפר הבית הרוחני אביב אפרת.jpg" alt="אביב אפרת הבית הרוחני" tabindex="0" />
+    </section>
+      </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section id="signup" class="cta-section py-16 bg-gradient-to-r from-pink-600 to-purple-700 text-white">
+    <div class="container">
+      <div class="cta-content">
+        <h3>מוכנה לפרוש כנפיים? 🦋</h3>
+        <p>הצטרפי לנשים שכבר בחרו להאיר מהקול שלהן ולהשפיע על העולם</p>
+        
+        <div class="cta-buttons">
+          <a href="https://app.upay.co.il/API6/s.php?m=SDhEMWRvd256Q3BOVEx1alczbmxqUT09" class="btn btn-primary">
+            ✅ אני רוצה להירשם!
+          </a>
+          <a href="https://wa.me/972536260735?text=היי אביב, אני רוצה לשמוע עוד על תכנית אפקט הפרפר" class="btn btn-secondary">
+            🟢💬 שיחה אישית
+          </a>
+          <a href="https://www.bitpay.co.il/app/share-info?i=202738567169_19kcFteP" target="_blank" rel="noopener" class="btn btn-bit" role="button" aria-label="תשלום דרך ביט">
+            ✨ תשלום בביט
+          </a>
+          <a href="https://app.upay.co.il/API6/s.php?m=NE1JM1ZZbGxURy90bFVvRksyeGx6QT09" target="_blank" rel="noopener" class="btn btn-vip" role="button" aria-label="תשלום דרך ביט">
+            ✨ אני מוכנה  לVIP
+          </a>
+        </div>
+        
+        <div class="urgency">
+          <strong>⏰ מקומות מוגבלים!</strong><br>
+          נותרו עוד 4 מקומות בלבד | הרשמה עד 1.7.25
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/972536260735" 
+     class="whatsapp-float" 
+     target="_blank" 
+     aria-label="שלח הודעת וואטסאפ">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+         alt="וואטסאפ" />
+  </a>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 אביב אפרת - אפקט הפרפר | כל הזכויות שמורות</p>
+      <p>פרטיות | תנאי שימוש | צרי קשר: habaitharochni@gmail.com</p>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll for signup buttons
+    document.querySelectorAll('a[href="#signup"]').forEach(button => {
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+        const signupSection = document.querySelector('#signup');
+        signupSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+    });
+
+    // Music functionality
+    document.addEventListener('DOMContentLoaded', () => {
+      const musicBtn = document.querySelector('.music-btn');
+      if (musicBtn) {
+        const audio = new Audio('lib/יהונתן ביטון מנגן מייפל סטורי-הועלה לאתר של אפקט הפרפר הבית הרוחני.mp3');
+        audio.loop = true;
+        audio.volume = 0.3;
+        musicBtn.addEventListener('click', () => {
+          audio.play().catch(() => console.log('Autoplay blocked'));
+          musicBtn.style.display = 'none';
+        });
+      }
+    });
+  </script>
+</body>
+</html>
